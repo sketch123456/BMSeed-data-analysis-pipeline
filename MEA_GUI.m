@@ -1,14 +1,7 @@
 function MEA_GUI()
 % MEA_GUI  Interactive GUI for examining Intan RHS recordings from MEAs.
 %
-% Compatible with: Octave (uses figure/uicontrol, not uifigure/uibutton)
-%
-%Features to Add:
-%custom downsampling rate
-%
-% Required files in the same directory:
-%   - read_Intan_RHS2000_multifile_BMSEED.m
-%
+
 % -------------------------------------------------------------------------
 % LAYOUT:
 %   LEFT   (px 0-280)    : controls — MEA type, load, Vrms window, table
