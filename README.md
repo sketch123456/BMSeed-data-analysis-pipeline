@@ -26,7 +26,7 @@ laboratories.
 
 ## Getting Started
 1. **Clone the repository:** `git clone https://github.com/your-username/your-repo-name`
-2. **Open in MATLAB:** Navigate to the folder and run `main.m` to launch the GUI.
+2. **Open in MATLAB:** Navigate to the folder and run `MEA_GUI.m` to launch the GUI.
 3. **Configuration:** Use the GUI panels to load your .rhs files and adjust parameters. 
    Detailed parameter logging is performed automatically for all analytical decisions.
 
