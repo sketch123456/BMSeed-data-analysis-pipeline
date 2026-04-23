@@ -1,60 +1,6 @@
 function Summary_var =  ...
                         read_Intan_RHS2000_multifile_BMSEED(newDir)
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-% BMSEED Notes:                                                           %
-%                                                                         %
-% Edited by BMSEED (on 12/18/24)                                          %
-%   -Fixed a minor bug regarding the "file_index" variable that caused    %
-%       issues when running the code in Matlab.                           %
-%                                                                         %
-% 12/28/21-Do NOT use special characters such as µ for file names.        %
-%          This causes an error on "s = dir(filename);"                   %
-%          as the dir function can not open a file with special characters%
-%                                                                         %
-% Edited by BMSEED (on 12/28/21)                                          %
-%   -Updated code so that multiple files can be processed at the same time%
-%   -Turned ON the MultiSelect option on uigetfile, this returns an       %
-%    iterable cell array that can be used to open all the files in one dir%
-%   -Updated code so that output variables are now contained within a     %
-%     structure called Summary_var.                                       %
-%       +This struct will have 1xn dimensions where n is the number of    %
-%       files                                                             %
-%       +The output variables will be a field for each entry on the struct%
-%       +Commented out:                                                   %
-%          +b_adc_ch                                                      %
-%          +b_adc_dat                                                     %
-%          +Stim_data                                                     %
-%          +Stim_param                                                    %
-%                                                                         %
-% Edited by BMSEED (on 08/25/21)                                          %
-%   - Updated code so that when using this file to read "info.rhs" (i.e., %
-%       when saving "one file per signal type" in Intan, there is no      %
-%       error because the 'data' output variables do not exist (i.e.,     %
-%       amplifier_data, board_adc_data, t, stim_data).                    %
-%   - Added 'stim_parameters' to the list of output variables.            %
-%                                                                         %
-% Edited by BMSEED (on 02/11/21)                                          %
-%   - Fixed bug when function call does not include a newDir              %
-%                                                                         %
-% Edited by BMSEED (on 09/24/20)                                          %
-%   - Added input argument to specify the directory were the file will be %
-%     looked for when first prompted.                                     %
-%                                                                         %
-% Edited by BMSEED (on 8/28/17)                                           %
-%   - Function outputs added: 8 variables                                 %
-%   - Commented out code that exports variables to workspace              %
-%   - Output variables:                                                   %
-%       + amplifier_channels: struct with info of the amplifier channels  %
-%       + amplifier_data: every row contains data for each electrode/channel
-%       + frequency_parameters: frequency parameters from data collection %
-%       + board_adc_channels: struct with info on analog inputs           %
-%       + board_adc_data: data from the analog inputs                     %
-%       + t: time data                                                    %
-%       + stim_data: stimulation data for all electrodes/channels         %
-%       + file: filename of data file opened                              %
-%                                                                         %
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 
 % read_Intan_RHS2000_file
 %
